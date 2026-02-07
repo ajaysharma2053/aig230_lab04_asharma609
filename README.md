@@ -1,103 +1,105 @@
 # AIG 230 – Lab 04  
-## Word Embeddings: Learning Meaning from Context
+## Word Embeddings and Semantic Representations
 
 ### Overview
 
-This lab introduces **learned text representations**, commonly known as **word embeddings**.  
-Unlike previous labs that relied on counting words or fixed n-gram contexts, this lab focuses on representations that are **learned from data**, **dense**, and **semantic**.
+In this lab, I explored **word embeddings**, which are learned vector representations of words based on their surrounding context in text data.  
+Unlike traditional count-based approaches such as bag-of-words or n-grams, word embeddings provide **dense and meaningful representations** that capture semantic relationships between words.
 
-You will explore how models can learn meaning from word co-occurrence patterns and how these representations are used in practical NLP workflows.
-
----
-
-### Learning Objectives
-
-By completing this lab, you will be able to:
-
-- Explain **distributional semantics** and why meaning can be learned from context
-- Train word embeddings using **Word2Vec** and **FastText**
-- Interpret **semantic similarity** using cosine distance
-- Perform **vector algebra (analogies)** and explain why it works
-- Visualize embedding spaces and reason about their structure
-- Compare embeddings to n-gram and count-based representations
-- Describe realistic **industry use cases** for word embeddings
+The lab focused on understanding how meaning can be learned from word co-occurrence patterns and how these representations are applied in practical natural language processing tasks.
 
 ---
 
-### Topics Covered
+### Learning Outcomes
 
-This lab directly builds on the lecture material for Week 4 and covers:
+By completing this lab, I was able to:
 
-- Learned representations vs engineered features  
-- Distributional semantics (“a word is known by the company it keeps”)  
-- Word2Vec (Skip-gram architecture, high-level intuition)  
-- Semantic similarity and nearest neighbors  
-- Vector arithmetic and analogies  
-- Visualization of embedding spaces (PCA)  
+- Understand **distributional semantics** and how word meaning emerges from context  
+- Train word embedding models using **Word2Vec** and **FastText**
+- Measure semantic similarity using **cosine similarity**
+- Interpret nearest neighbors in embedding space
+- Perform **vector arithmetic (word analogies)** and understand why it works
+- Visualize high-dimensional embeddings using dimensionality reduction
+- Compare Word2Vec and FastText, especially for rare and unseen words
+- Identify realistic industry use cases and limitations of word embeddings
+
+---
+
+### Concepts Covered
+
+The main concepts covered in this lab include:
+
+- Learned representations vs manually engineered features  
+- The distributional hypothesis (“a word is known by the company it keeps”)  
+- Word2Vec architectures (Skip-gram and CBOW at a conceptual level)  
+- Semantic similarity and nearest-neighbor search  
+- Vector-based analogies  
+- Visualization of embedding spaces using PCA  
 - FastText and subword information  
-- Conceptual comparison with GloVe  
-- Practical limitations and evaluation considerations  
+- Conceptual comparison with other embedding approaches such as GloVe  
+- Practical challenges and evaluation considerations when using embeddings  
 
 ---
 
-### Tools and Libraries
+### Tools and Libraries Used
 
-You will work with:
+The following tools and libraries were used throughout the lab:
 
 - **Gensim** for training Word2Vec and FastText models  
 - **scikit-learn** for dataset loading and dimensionality reduction  
-- **NLTK** for basic tokenization and preprocessing  
-- **matplotlib** for visualization  
+- **NLTK** for text preprocessing and tokenization  
+- **matplotlib** for visualizing embedding spaces  
 
 ---
 
 ### Dataset
 
-The lab uses the **20 Newsgroups** dataset, a real-world text corpus containing posts from multiple topics such as technology, politics, science, and religion.
+This lab uses the **20 Newsgroups** dataset, which contains text documents from multiple topic areas such as technology, science, politics, and religion.
 
-This dataset is commonly used in NLP research and is representative of industry text sources such as forums, support tickets, and knowledge bases.
-
----
-
-### Files in This Lab
-
-- `AIG230_Week4_Lab_Word_Embeddings.ipynb`  
-  The main lab notebook.  
-  Includes:
-  - Concept explanations
-  - Fully commented code
-  - Visualization
-  - Multiple checkpoints for reflection and understanding
+The dataset represents real-world text data similar to what is commonly found in forums, customer support systems, and online discussion platforms.
 
 ---
 
-### Instructions
+### Work Completed
 
-1. Use this template repository.
-2. Create a repository named `aig230-lab04-yourname`.
-3. Complete the notebook:
-   - Run all code cells
-   - Answer **all checkpoint questions** in markdown cells
-4. Commit and push your completed notebook to your repository.
-5. Submit the repository link on Blackboard.
+In the lab notebook, I completed the following tasks:
 
----
+- Preprocessed and cleaned the text data  
+- Trained Word2Vec models with different parameter settings  
+- Compared the effects of **window size**, **vector dimensionality**, and **training methods (CBOW vs Skip-gram)**  
+- Evaluated semantic similarity using nearest neighbors  
+- Compared Word2Vec and FastText behavior for out-of-vocabulary words  
+- Added **bigrams** to improve representations of multi-word concepts  
+- Reflected on how different design choices affect embedding quality  
 
-### Expectations
-
-- Your notebook should run from top to bottom without errors.
-- Code should not be deleted or heavily rewritten unless instructed.
-- Written answers should be clear, concise, and in your own words.
-- Focus on **understanding and interpretation**, not just producing output.
+Each section includes checkpoint questions to support interpretation and understanding of the results.
 
 ---
 
-### Key Takeaway
+### Files Included
+ 
+  The completed lab notebook containing:
+  - Code implementation  
+  - Visualizations  
+  - Experimental comparisons  
+  - Written explanations and reflections  
 
-This lab marks a conceptual shift in the course:
+---
 
-> We move from **counting words** to **learning meaning**.
+### How to Run
 
-Word embeddings are a foundational idea that enables modern neural NLP models and prepares you for upcoming topics such as text classification, transfer learning, and contextual embeddings.
+1. Open the notebook in Jupyter Notebook or VS Code  
+2. Run all cells from top to bottom  
+3. Ensure all checkpoint questions are answered  
+4. Confirm that the notebook runs without errors  
+
+---
+
+### Key Reflection
+
+This lab demonstrates a shift from simply **counting words** to **learning semantic meaning** from data.  
+Word embeddings form a foundational component of modern NLP systems and are widely used in applications such as semantic search, recommendation systems, and text classification.
+
+Understanding how embeddings are trained, evaluated, and interpreted is essential for building reliable and responsible NLP solutions.
 
 ---
